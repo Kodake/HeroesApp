@@ -8,6 +8,14 @@
     </div>
 </div>
 
-<div class="card-columns">
+<div [ngClass]="(heroes.length == 1)?'row':'row row-cols-1 row-cols-md-3'">
     <app-heroe-tarjeta [heroe]="heroe" [index]="heroe.idx" *ngFor="let heroe of heroes"></app-heroe-tarjeta>
 </div>
+
+<!-- <div class="row" *ngIf="heroes.length == 1">
+    <app-heroe-tarjeta [heroe]="heroe" [index]="heroe.idx" *ngFor="let heroe of heroes"></app-heroe-tarjeta>
+</div> -->
+
+<!-- <div class="row row-cols-1 row-cols-md-3" *ngIf="heroes.length > 1">
+    <app-heroe-tarjeta [heroe]="heroe" [index]="heroe.idx" *ngFor="let heroe of heroes"></app-heroe-tarjeta>
+</div> -->
